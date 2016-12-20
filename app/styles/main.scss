@@ -29,6 +29,7 @@ body {
 .footer {
   padding-left: 15px;
   padding-right: 15px;
+  margin-bottom: 2em;
 }
 
 /* Custom page header */
@@ -47,7 +48,7 @@ body {
 
 /* Custom page footer */
 .footer {
-  padding-top: 19px;
+  padding-top: 10px;
   color: #777;
   border-top: 1px solid #e5e5e5;
 }
@@ -57,14 +58,10 @@ body {
 }
 
 /* Main marketing message and sign up button */
-// .jumbotron {
-//   text-align: center;
-//   border-bottom: 1px solid #e5e5e5;
-//   .btn {
-//     font-size: 21px;
-//     padding: 14px 24px;
-//   }
-// }
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
 
 /* Supporting marketing content */
 .marketing {
@@ -136,35 +133,57 @@ section.hero {
     }
 }
 
-.wrapper {
-  text-align: center;
-}
-
-button {
-  border-sizing: border-box;
+.btn-main {
+  font-size: 21px;
+  padding: 10px 24px;
   border: 2px solid black;
-  position: absolute;
-  text-align: center;
-  margin: 0 auto;
-  top: 50%;
-  right: 6em;
-  width: auto;
+  z-index: 999;
   background-color: white;
+  left: 50%;
+  display: inline-block;
+  top: 50%;
+  margin-top: 10em;
+  bottom:5px;
   text-decoration: none;
   color: black;
-    a:link {
-      text-decoration: none;
-    }
-    a:visited {
-      text-decoration: none;
-    }
-    a:active {
+
+    a:focus {
       text-decoration: none;
     }
     a:hover {
       text-decoration: none;
     }
 }
+
+.wrapper {
+  text-align: center;
+}
+
+// button {
+//   border-sizing: border-box;
+//   border: 2px solid black;
+//   position: absolute;
+//   text-align: center;
+//   margin: 0 auto;
+//   top: 50%;
+//   right: 6em;
+//   width: auto;
+//   background-color: white;
+//   text-decoration: none;
+//   color: black;
+//     a:link {
+//       text-decoration: none;
+//     }
+//     a:visited {
+//       text-decoration: none;
+//     }
+//     a:active {
+//       text-decoration: none;
+//     }
+//     a:hover {
+//       text-decoration: none;
+//     }
+// }
 
 .hero .container {
   display: block;
@@ -182,23 +201,23 @@ button {
   background-color: #fff;
   width: 100%;
 }
-
-.nav {
-  position: relative;
-  padding: 0.2em;
-  margin: 0 auto;
-  box-sizing: border-box;
-  border-box: 2px solid black;
-  font-size: 1em;
-
-    @include tablet {
-
-    }
-
-      @include desktop {
-
-      }
-}
+//
+// .nav {
+//   position: relative;
+//   padding: 0.2em;
+//   margin: 0 auto;
+//   box-sizing: border-box;
+//   border-box: 2px solid black;
+//   font-size: 1em;
+//
+//     @include tablet {
+//
+//     }
+//
+//       @include desktop {
+//
+//       }
+// }
 
   ul {
       color: black;
@@ -206,7 +225,6 @@ button {
       margin: 0;
       padding: 0;
       overflow: hidden;
-
 
       @include desktop {
         box-sizing: border-box;
@@ -228,7 +246,7 @@ button {
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
-      margin: 2em;
+      margin: 1em 1em 1em 1em;
 
       @include desktop {
         box-sizing: border-box;
@@ -244,124 +262,106 @@ button {
 
 
 
-.main-box {
-  display: flex;
-  margin: 0 auto;
-    // @include mobile-lg {
-    //   display: block;
-    // }
-}
+// .main-box {
+//   position: relative;
+//   width:100vh;
+//   margin: auto;
+// }
 
 .box {
   color: blue;
   padding: 1em;
-  margin: 0 auto;
+  margin-top: 1em;
   display: block;
   text-decoration: none;
-
+  background-color: yellow;
+  width: 100%;
+  height: 20em;
+      a:hover {
+        filter:  custom(255,255,255);
+      }
     h1 {
       font-size: 2em;
       background-color: white;
       margin: auto;
       text-decoration: none;
     }
-
-
 }
 
 #one {
-  width: 20em;
   height: 20em;
-  display: block;
   background-color: pink;
-  margin: 0 auto;
+  position: absolute;
+  z-index: 1;
   float: left;
+  margin-top: 5em;
 
   @include desktop {
     width: 20em;
     height: 20em;
     margin: 0 auto;
   }
-
-}
-  // @include background("../images/collage.jpg");
-
-.overlay {
-    background-color: yellow;
-    margin: 0 auto;
-
-    a:hover {
-      filter: opacity(0.2);
-    }
 }
 
 #two {
-  width: 30em;
-  height: 40em;
-  margin: 0 auto;
+  position:absolute;
+  height: 20em;
   background-color: blue;
-
-    @include phablet {
-      width: 20em;
-      height: 20em;
-      margin: 0 auto;
-      background-color: pink;
-    }
+  position: absolute;
+  z-index: 1;
+  float: left;
+  margin-top: 5em;
 
   @include desktop {
     width: 20em;
     height: 20em;
     margin: 0 auto;
-    background-color: yellow;
-  }
-
-
-  a:hover {
-    filter: opacity(0.6);
   }
 }
 
-//LEAVE FOR NOW-MORE TO DO -DESIGN
-
-// #four {
-//   width: 20em;
-//   height: 20em;
-//   float: left;
-//   margin: 3em;
-//   @include background("../images/collage.jpg");
-//     transition: .85;
+// .overlay {
+//     background-color: yellow;
+//     margin: 0 auto;
 //
-// }
-//
-// #five {
-//   width: 20em;
-//   height: 20em;
-//   float: left;
-//   margin: 3em;
-//   @include background("../images/collage.jpg");
-// }
-//
-// #six {
-//   width: 20em;
-//   height: 20em;
-//   float: left;
-//   margin: 3em;
-//   @include background("../images/noman.jpg");
-//     h1 {
-//       font-size: 5em;
-//       background-color: orange;
-//       margin: auto;
-//       color: white;
+//     a:hover {
+//       filter: opacity(0.2);
 //     }
 // }
+
+//LEAVE FOR NOW-MORE TO DO -DESIGN
+
+
+
 
 
 //CONTACT PAGE
 
+nav {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  background: white;
+  // position: fixed;
+  margin: 0 auto;
+  top: 0;
+  right: 0;
+  z-index: 4000;
+  // padding: 0 1em;
+}
+
 .sub-hero {
+  background-image: url(../images/beach.jpg);
+  background-position: 50%;
   background-size: cover;
-  background-position: center;
-  text-align: left;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  position: relative;
+
+   img {
+     width: 100%;
+     height: 100vh;
+   }
 }
 
 .header {
@@ -370,6 +370,10 @@ button {
 
 .sub-header {
   text-align: left;
+  font-size: 2em;
+  padding-left: 0.5em;
+  padding-right: 1em;
+
 }
 
 .content-container-two {
@@ -378,10 +382,11 @@ button {
 
 .description {
   text-align: left;
+  padding: 1em;
 }
 
 .inline-block {
-  margin: 3em;
+  margin: 1em;
 }
 
 // html {
