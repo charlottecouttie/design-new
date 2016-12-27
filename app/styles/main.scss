@@ -128,6 +128,15 @@ body {
   font-size: 5em;
   }
 
+  @include tablet {
+    h1 {
+    font-size: 15em;
+    text-align:left;
+    line-height: 0.8em;
+   }
+
+  }
+
   @include desktop {
    width: 100%;
    position: fixed;
@@ -328,23 +337,21 @@ body {
 //FRONT PAGE
 
 .content-container-three {
-  background-color: #fff;
-  width: 50%;
+  width: 100%;
+  height: 100vh;
+}
+
+.sub-content-container {
+  width: 100%;
 }
 
 .box-front {
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: inherit;
   background-size: cover;
-  padding: 5em;
-  margin-top: 1em;
-  display: block;
-  text-decoration: none;
   background-color: #e5e6e8;
-  width: 20em;
-  height: 20em;
-  overflow: hidden;
+  margin: 1em;
 
   a {
     background: white;
@@ -364,72 +371,49 @@ body {
       margin: auto;
       text-decoration: none;
     }
-
-    @include desktop {
-      position: relative;
-      width: 20em;
-      height: 20em;
-    }
 }
 
-#one-front {
-  width: 50%;
+.box-front-one {
   height: 5em;
   background-image: url("../images/karenwalker.jpg");
-  margin-top: 5em;
-
-      @include desktop {
-
-        margin-top: 5em;
-        display: block;
-        width: 40em;
-        height: 40em;
-        padding: 10em;
-        margin-bottom: 2em;
-        float: left;
-          a {
-            background: white;
-            border: 2px solid black;
-            padding: 1em;
-            text-decoration: none;
-          }
-        }
-}
-
-#two-front {
-  width: 50%;
-  height: 5em;
-  background-image: url("../images/arch.jpg");
-
       @include tablet {
-        width: 100%;
         height: 30em;
       }
       @include desktop {
+        margin-top: 5em;
+        display: block;
         padding: 10em;
-        width: 40em;
-        height: 40em;
-        margin-top: 5em 1em 1em 1em;
-        margin-bottom: 2em;
+        overflow: visible;
+        float: left;
+        }
+}
+
+.box-front-two {
+  height: 5em;
+  background-image: url("../images/arch.jpg");
+      @include tablet {
+        height: 30em;
+      }
+      @include desktop {
+        margin-top: 5em;
+        display: block;
+        padding: 10em;
+        overflow: visible;
         float: left;
       }
 }
 
-#three-front {
+.box-front-three {
   height: 5em;
   background-image: url("../images/graphicdesigner.jpg");
-
         @include tablet {
-          width: 100%;
           height: 30em;
         }
-
         @include desktop {
-          padding: 20em;
-          width: 40em;
-          height: 40em;
-          margin-top: 5em 1em 1em 1em;
-          margin-bottom: 2em;
+          margin-top: 5em;
+          display: block;
+          padding: 10em;
+          overflow: visible;
           float: left;
         }
 
@@ -496,6 +480,14 @@ nav {
       text-align: center;
       line-height: 0.25rem;
       margin: 0;
+
+      @include tablet {
+        h2 {
+          color: white;
+          font-size: 5em;
+          padding-left: 0.2em;
+        }
+      }
 
       @include desktop {
         h2 {
