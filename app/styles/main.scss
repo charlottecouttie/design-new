@@ -335,89 +335,141 @@ body {
 
 
 //FRONT PAGE
-
-.content-container-three {
-  width: 100%;
-  height: 100vh;
+body{
+  background: #eee;
 }
 
-.sub-content-container {
-  width: 100%;
+.wrapper {
+  margin: 5.5em auto;
+  display:flex;
+  flex-wrap:wrap;
+  align-items: stretch;
 }
 
-.box-front {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: inherit;
-  background-size: cover;
-  background-color: #e5e6e8;
-  margin: 1em;
+.tile-container{
+  display:flex;
+  flex-wrap:wrap;
+  align-items: stretch;
+}
+.tile{
+  flex:1 0 20em;
+  align-self:stretch;
+  max-width:100%;
+  min-height: 10rem;
+  margin: 0.5em 0.5em 0.5em 0.5em;
+  // border: 3px solid #ccc;
+  background:white;
 
-  a {
-    background: white;
-    border: 2px solid black;
-    padding: 1em;
-    text-decoration: none;
-    color: black;
+  // Min width
+  &:nth-child(2n+3){
+    flex-basis:20em;
   }
-
-  a:hover {
-    background-color: white;
-    opacity: 0.7;
+  &:nth-child(4n+5){
+    flex-basis:20em;
   }
-    h1 {
-      font-size: 2em;
-      background-color: white;
-      margin: auto;
-      text-decoration: none;
-    }
-}
+  // End Min width
 
-.box-front-one {
-  height: 5em;
-  background-image: url("../images/karenwalker.jpg");
-      @include tablet {
-        height: 30em;
-      }
-      @include desktop {
-        margin-top: 5em;
-        display: block;
-        padding: 10em;
-        overflow: visible;
-        float: left;
-        }
-}
-
-.box-front-two {
-  height: 5em;
-  background-image: url("../images/arch.jpg");
-      @include tablet {
-        height: 30em;
-      }
-      @include desktop {
-        margin-top: 5em;
-        display: block;
-        padding: 10em;
-        overflow: visible;
-        float: left;
-      }
-}
-
-.box-front-three {
-  height: 5em;
-  background-image: url("../images/graphicdesigner.jpg");
-        @include tablet {
-          height: 30em;
-        }
-        @include desktop {
-          margin-top: 5em;
-          display: block;
-          padding: 10em;
-          overflow: visible;
-          float: left;
-        }
+  // Color
+  &:nth-child(odd){
+     border-top-color:teal;
+  }
+  &:nth-child(even){
+     border-top-color:wheat;
+  }
+  // End Color
 
 }
+
+@media screen and(max-width:500px){
+  .tile{
+     flex-basis:100% !important;
+     max-width:100%;
+  }
+}
+
+//
+// .content-container-three {
+//   width: 100%;
+//   height: 100vh;
+// }
+//
+// .sub-content-container {
+//   width: 100%;
+// }
+//
+// .box-front {
+//   background-position: center center;
+//   background-repeat: no-repeat;
+//   background-attachment: inherit;
+//   background-size: cover;
+//   background-color: #e5e6e8;
+//   margin: 1em;
+//
+//   a {
+//     background: white;
+//     border: 2px solid black;
+//     padding: 1em;
+//     text-decoration: none;
+//     color: black;
+//   }
+//
+//   a:hover {
+//     background-color: white;
+//     opacity: 0.7;
+//   }
+//     h1 {
+//       font-size: 2em;
+//       background-color: white;
+//       margin: auto;
+//       text-decoration: none;
+//     }
+// }
+//
+// .box-front-one {
+//   height: 5em;
+//   background-image: url("../images/karenwalker.jpg");
+//       @include tablet {
+//         height: 30em;
+//       }
+//       @include desktop {
+//         margin-top: 5em;
+//         display: block;
+//         padding: 10em;
+//         overflow: visible;
+//         float: left;
+//         }
+// }
+//
+// .box-front-two {
+//   height: 5em;
+//   background-image: url("../images/arch.jpg");
+//       @include tablet {
+//         height: 30em;
+//       }
+//       @include desktop {
+//         margin-top: 5em;
+//         display: block;
+//         padding: 10em;
+//         overflow: visible;
+//         float: left;
+//       }
+// }
+//
+// .box-front-three {
+//   height: 5em;
+//   background-image: url("../images/graphicdesigner.jpg");
+//         @include tablet {
+//           height: 30em;
+//         }
+//         @include desktop {
+//           margin-top: 5em;
+//           display: block;
+//           padding: 10em;
+//           overflow: visible;
+//           float: left;
+//         }
+//
+// }
 
 //CONTACT PAGE
 
@@ -541,6 +593,9 @@ nav {
   color: black;
 }
 
+.footer {
+  padding-left: 0.8em;
+}
 // html {
 //   box-sizing: border-box;
 // }
