@@ -58,7 +58,7 @@
 }
 
 @mixin mobile-lg {
-  @media (min-width: 300px) {
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     @content;
   }
 }
@@ -69,10 +69,17 @@
   }
 }
 
+// @mixin tablet {
+//   @media (min-width: 750px) {
+//     @content;
+//   }
+// }
+
+/* iPads (portrait and landscape) ----------- */
 @mixin tablet {
-  @media (min-width: 750px) {
-    @content;
-  }
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  @content;
+}
 }
 
 @mixin desktop {
@@ -84,6 +91,13 @@
 @mixin desktop-hd {
   @media (min-width: 1400px) {
     @content;
+  }
+}
+
+@media screen and(max-width:500px){
+  .tile{
+     flex-basis:100% !important;
+     max-width:100%;
   }
 }
 

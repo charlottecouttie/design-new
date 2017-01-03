@@ -2,7 +2,6 @@
 @import 'https://fonts.googleapis.com/css?family=Lato:300,400';
 
 
-
 $icon-font-path: '../fonts/';
 // * {margin: 0; padding: 0;}
 //
@@ -19,7 +18,7 @@ $icon-font-path: '../fonts/';
 
 /* Space out content a bit */
 body {
-  padding-bottom: 20px;
+  // padding-bottom: 20px;
   // background-color: #696969;
 }
 
@@ -119,13 +118,18 @@ body {
 // }
 
 .container-main {
-  position: fixed;
+  position: absolute; //or fixed
   width: 100%;
-  br {
-    line-height: inherit;
-  }
+  text-align: left;
+  padding-left: 1em;
+
+  // br {
+  //   line-height: 1em;
+  // }
   h1 {
-  font-size: 5em;
+  font-size: 8em;
+  line-height: 0.5em;
+  position: relative;
   }
 
   @include tablet {
@@ -169,7 +173,7 @@ body {
   left: 50%;
   display: inline-block;
   top: 50%;
-  margin-top: 20em;
+  margin-top: 30em;
   bottom:5px;
   text-decoration: none;
   color: black;
@@ -179,13 +183,16 @@ body {
     a:hover {
       text-decoration: none;
     }
-  @include desktop {
-  margin-top: 10em;
-  }
+    @include tablet {
+      margin: 0 auto;
+    }
+    @include desktop {
+    margin-top: 10em;
+    }
 
 }
 
-.wrapper {
+.wrapper{
   text-align: center;
   width: 100%
 }
@@ -270,12 +277,18 @@ body {
     background-color: white;
     opacity: 0.7;
   }
+
     h1 {
       font-size: 2em;
       background-color: white;
       margin: auto;
       text-decoration: none;
     }
+
+    @include tablet {
+      margin: 0 auto;
+    }
+
     @include desktop {
       margin: 0 auto;
       width: 100%;
@@ -335,12 +348,10 @@ body {
 
 
 //FRONT PAGE
-body{
-  background: #eee;
-}
+
 
 .wrapper {
-  margin: 5.5em auto;
+  margin: 5em auto;
   display:flex;
   flex-wrap:wrap;
   align-items: stretch;
@@ -355,121 +366,124 @@ body{
   flex:1 0 20em;
   align-self:stretch;
   max-width:100%;
-  min-height: 10rem;
+  min-height: 20rem;
   margin: 0.5em 0.5em 0.5em 0.5em;
   // border: 3px solid #ccc;
   background:white;
 
   // Min width
   &:nth-child(2n+3){
-    flex-basis:20em;
+    flex-basis:40em;
   }
   &:nth-child(4n+5){
-    flex-basis:20em;
+    flex-basis:40em;
   }
+    a{
+      position: relative;
+      display: inline-flex;
+    }
   // End Min width
 
-  // Color
-  &:nth-child(odd){
-     border-top-color:teal;
+  @include tablet {
+   min-height: 30rem;
   }
-  &:nth-child(even){
-     border-top-color:wheat;
-  }
-  // End Color
-
+  @include desktop {
+    // margin-top: 5em;
+    flex:1 0 20em;
+    min-width: 40em;
+    min-height: 40rem;
+    display: block;
+    padding: 10em;
+    overflow: hidden;
+    float: left;
+   }
 }
 
-@media screen and(max-width:500px){
-  .tile{
-     flex-basis:100% !important;
-     max-width:100%;
-  }
+.content-container-three {
+  width: 100%;
+  height: 100vh;
 }
 
+.sub-content-container {
+  width: 100%;
+}
+
+.box-front {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-size: cover;
+  background-color: #e5e6e8;
+  margin: 1em;
+
+  a {
+    background: white;
+    border: 2px solid black;
+    padding: 1em;
+    text-decoration: none;
+    color: black;
+  }
+
+  a:hover {
+    background-color: white;
+    opacity: 0.7;
+  }
+    h1 {
+      font-size: 2em;
+      background-color: white;
+      margin: auto;
+      text-decoration: none;
+    }
+}
 //
-// .content-container-three {
-//   width: 100%;
-//   height: 100vh;
-// }
-//
-// .sub-content-container {
-//   width: 100%;
-// }
-//
-// .box-front {
-//   background-position: center center;
-//   background-repeat: no-repeat;
-//   background-attachment: inherit;
-//   background-size: cover;
-//   background-color: #e5e6e8;
-//   margin: 1em;
-//
-//   a {
-//     background: white;
-//     border: 2px solid black;
-//     padding: 1em;
-//     text-decoration: none;
-//     color: black;
-//   }
-//
-//   a:hover {
-//     background-color: white;
-//     opacity: 0.7;
-//   }
-//     h1 {
-//       font-size: 2em;
-//       background-color: white;
-//       margin: auto;
-//       text-decoration: none;
-//     }
-// }
-//
-// .box-front-one {
-//   height: 5em;
-//   background-image: url("../images/karenwalker.jpg");
-//       @include tablet {
-//         height: 30em;
-//       }
-//       @include desktop {
-//         margin-top: 5em;
-//         display: block;
-//         padding: 10em;
-//         overflow: visible;
-//         float: left;
-//         }
-// }
-//
-// .box-front-two {
-//   height: 5em;
-//   background-image: url("../images/arch.jpg");
-//       @include tablet {
-//         height: 30em;
-//       }
-//       @include desktop {
-//         margin-top: 5em;
-//         display: block;
-//         padding: 10em;
-//         overflow: visible;
-//         float: left;
-//       }
-// }
-//
-// .box-front-three {
-//   height: 5em;
-//   background-image: url("../images/graphicdesigner.jpg");
-//         @include tablet {
-//           height: 30em;
-//         }
-//         @include desktop {
-//           margin-top: 5em;
-//           display: block;
-//           padding: 10em;
-//           overflow: visible;
-//           float: left;
-//         }
-//
-// }
+.box-front-one {
+  // height: 5em;
+  background-image: url("../images/karenwalker.jpg");
+      @include tablet {
+        height: 30em;
+      }
+      @include desktop {
+        // margin-top: 5em;
+        display: block;
+        padding: 10em;
+        overflow: visible;
+        float: left;
+        }
+}
+
+.box-front-two {
+  // height: 5em;
+  background-image: url("../images/arch.jpg");
+  background-size: inherit;
+  background-repeat: no-repeat;
+
+      @include tablet {
+        height: 30em;
+      }
+      @include desktop {
+        // margin-top: 5em;
+        display: block;
+        padding: 10em;
+        overflow: visible;
+        float: left;
+      }
+}
+
+.box-front-three {
+  height: 5em;
+  background-image: url("../images/graphicdesigner.jpg");
+        @include tablet {
+          height: 30em;
+        }
+        @include desktop {
+          // margin-top: 5em;
+          display: block;
+          padding: 10em;
+          overflow: visible;
+          float: left;
+        }
+
+}
 
 //CONTACT PAGE
 
@@ -523,12 +537,21 @@ nav {
   z-index: 99;
   position: relative;
 
+    h2 {
+    text-transform: uppercase;
+    margin-top: 0;
+    font-size: 5rem;
+    white-space: nowrap;
+    text-align: left;
+    color: white;
+    padding-left: 2.5em;
+    }
+
     header {
       position: absolute;
       top: 90%;
-      left: 30%;
+      left: 15%;
       transform: translate(-55%, -40%);
-      color: black;
       text-align: center;
       line-height: 0.25rem;
       margin: 0;
@@ -545,17 +568,12 @@ nav {
         h2 {
         color: white;
         font-size: 10em;
+
       }
     }
 }
 
-  h2 {
-    text-transform: uppercase;
-    margin-top: 0;
-    font-size: 3rem;
-    white-space: nowrap;
-    text-align: left;
-     }
+
 }
 
 .header {
@@ -586,6 +604,34 @@ nav {
         -moz-columns: 100px 2; /* Firefox */
         columns: 100px 2;
       }
+}
+
+.video-hero {
+  	width: 100%;
+	  height:100%;
+    position: relative;
+
+	  @include desktop {
+      width: 100%;
+      height: auto;
+
+	  }
+
+}
+
+video {
+  width: 100%;
+  position: relative;
+  margin: auto;
+
+  @include desktop {
+    max-width: 100%;
+    height: auto;
+    margin: 2em;
+    position: relative;
+    display:block;
+
+  }
 }
 
 .inline-block {
